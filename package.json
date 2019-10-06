@@ -1,0 +1,19 @@
+{
+  "name": "jquery-testrun",
+  "version": "1.0.0",
+  "description": "This is an example site for flexbox and media queries // I also did some JQuery testing for fun",
+  "main": "main.js",
+  "scripts": {
+    "dev": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "author": "PCDSandwichMan",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^8.1.0"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.3",
+    "parcel-plugin-imagemin": "^3.0.0"
+  }
+}

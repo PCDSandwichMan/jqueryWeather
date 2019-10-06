@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="./jquery.min.js"></script>
+    <script src="https://use.fontawesome.com/3a2899ccc1.js"></script>
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
+    <script defer src="main.js"></script>
+    <link rel="stylesheet" href="./main.css" />
+    <title>Jquery Weather</title>
+  </head>
+  <body>
+    <header>
+      <h1>Jquery Weather</h1>
+      <i class="fa fa-bars" aria-hidden="true" style="display: none"></i>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Weather</a></li>
+        <li><a href="#main__about">About</a></li>
+        <li><a href="#content__text">Contact</a></li>
+      </ul>
+    </header>
+    <main>
+      <div id="main__jumbo">
+        <h2></h2>
+        <h3>Loading...</h3>
+        <img id="jumbo__image" alt="weather icon" style="display: none" />
+
+        <!-- ! Ignore this, its just an image that uses some math to animate -->
+        <svg
+          id="weather__spinner"
+          width="45"
+          height="45"
+          viewBox="0 0 45 45"
+          xmlns="http://www.w3.org/2000/svg"
+          stroke="#fff"
+        >
+          <g
+            fill="none"
+            fill-rule="evenodd"
+            transform="translate(1 1)"
+            stroke-width="2"
+          >
+            <circle cx="22" cy="22" r="6" stroke-opacity="0">
+              <animate
+                attributeName="r"
+                begin="1.5s"
+                dur="3s"
+                values="6;22"
+                calcMode="linear"
+                repeatCount="indefinite"
+              />
+              <animate
+                attributeName="stroke-opacity"
+                begin="1.5s"
+                dur="3s"
+                values="1;0"
+                calcMode="linear"
+                repeatCount="indefinite"
+              />
+              <animate
+                attributeName="stroke-width"
+                begin="1.5s"
+                dur="3s"
+                values="2;0"
+                calcMode="linear"
+                repeatCount="indefinite"
+              />
+            </circle>
+            <circle cx="22" cy="22" r="6" stroke-opacity="0">
+              <animate
+                attributeName="r"
+                begin="3s"
+                dur="3s"
+                values="6;22"
+                calcMode="linear"
+                repeatCount="indefinite"
+              />
+              <animate
+                attributeName="stroke-opacity"
+                begin="3s"
+                dur="3s"
+                values="1;0"
+                calcMode="linear"
+                repeatCount="indefinite"
+              />
+              <animate
+                attributeName="stroke-width"
+                begin="3s"
+                dur="3s"
+                values="2;0"
+                calcMode="linear"
+                repeatCount="indefinite"
+              />
+            </circle>
+            <circle cx="22" cy="22" r="8">
+              <animate
+                attributeName="r"
+                begin="0s"
+                dur="1.5s"
+                values="6;1;2;3;4;5;6"
+                calcMode="linear"
+                repeatCount="indefinite"
+              />
+            </circle>
+          </g>
+        </svg>
+        <!-- ! Ignore this, its just an image that uses some math to animate -->
+
+        <div id="jumbo__weatherStats">
+          <h5 id="weatherStats__temp"></h5>
+          <h5 id="weatherStats__wind"></h5>
+        </div>
+        <div id="jumbo__otherInfo"></div>
+        <div id="jumbo__otherStuff">
+          <ul>
+            <li id="other-geo-lat">
+              <h5></h5>
+              <small>Latitude</small>
+            </li>
+            <li id="other-geo-long">
+              <h5></h5>
+              <small>Longitude</small>
+            </li>
+            <li id="other-humidity">
+              <h5></h5>
+              <small>Humidity</small>
+            </li>
+            <li id="other-pressure">
+              <h5></h5>
+              <small>Pressure</small>
+            </li>
+            <li id="other-min">
+              <h5></h5>
+              <small>Min-Temp</small>
+            </li>
+            <li id="other-max">
+              <h5></h5>
+              <small>Max-Temp</small>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div id="main__about">
+        <h3>Ajax and Styles</h3>
+        <p>
+          This site is for testing and practice utilizing Jquery. I wanted to
+          see if as of 2019 is Jquery an obsolete very large library that can be
+          replaced with vanilla JavaScript. While every feature that Jquery
+          provided vanilla JavaScript was able to handle milliseconds faster. I
+          was about to also match the length of Jquery's well know effective
+          syntax with ES6 features. But....... Jquery still wins because it was
+          a dev's best friend for browser compatibility back in the day when we
+          needed it most.
+        </p>
+      </div>
+    </main>
+    <footer>
+      <div id="footer__content-container">
+        <div id="content__text">
+          <h5>
+            Hello Everyone! I am a developer from Utah and lifelong learner. If
+            you would like to see more of my work checkout my portfolio or
+            GitHub below. Or if you have and questions let me know!
+          </h5>
+          <!-- - Pardon my list format follow Brits method it is much much cleaner -->
+          <ul>
+            <li>
+              <a target="_blank" href="https://github.com/PCDSandwichMan/"
+                ><i class="fa fa-github" aria-hidden="true"></i
+              ></a>
+            </li>
+            <li>
+              <a
+                target="_blank"
+                href="https://www.linkedin.com/in/matthewendicott/"
+                ><i class="fa fa-linkedin" aria-hidden="true"></i
+              ></a>
+            </li>
+            <li>
+              <a target="_blank" href="https://www.matthewendicott.space/"
+                ><i class="fa fa-user" aria-hidden="true"></i
+              ></a>
+            </li>
+          </ul>
+          <!-- - Pardon my list format follow Brits method it is much much cleaner -->
+          <div id="footer__contact">
+            <form
+              action="https://formspree.io/matthew.endicott.dev@gmail.com"
+              method="POST"
+            >
+              <input type="text" name="name" placeholder="Name" />
+              <input type="text" name="subject" placeholder="Subject" />
+              <input type="text" name="email" placeholder="Email" />
+              <textarea name="message" placeholder="Message"></textarea>
+              <button type="submit">SEND</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

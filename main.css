@@ -1,0 +1,450 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900&display=swap');
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+ol,
+ul {
+  list-style: none;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+html {
+  overflow-x: hidden;
+}
+body {
+  overflow-x: hidden;
+  min-height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.63), rgba(0, 0, 0, 0.925)), url(images/astronomy-background-bright-544268.jpg) no-repeat center center fixed;
+  background-size: cover;
+  font-family: 'Montserrat', sans-serif;
+  color: #f5f5f5;
+}
+body::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background-color: #f5f5f5;
+}
+body::-webkit-scrollbar {
+  width: 10px;
+  background-color: #f5f5f5;
+}
+body::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #7e097e;
+}
+.show {
+  display: block !important;
+}
+header {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 30px;
+}
+header ul {
+  width: 40%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+header ul a {
+  color: white;
+  text-decoration: none;
+  transition: all 150ms ease-in-out;
+}
+header ul a:hover {
+  color: #ff42ff;
+  text-decoration: underline;
+}
+main {
+  margin: 0px 8vw 15vh;
+}
+#main__jumbo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+  width: 100%;
+  margin: 8vh auto 0 auto;
+  border: 2px solid black;
+  background: #69696944;
+}
+#main__about {
+  width: 55%;
+}
+#main__about h3 {
+  width: 70%;
+  white-space: nowrap;
+  font-size: 3rem;
+  margin: 40px 0 20px 0;
+  border-bottom: 1px white solid;
+}
+#main__about p {
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  line-height: 3rem;
+}
+#main__jumbo {
+  padding-top: 4%;
+}
+#main__jumbo h2 {
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+#main__jumbo h3 {
+  text-transform: capitalize;
+  font-size: 2.5rem;
+}
+#main__jumbo img {
+  width: 20%;
+}
+#jumbo__weatherStats {
+  display: flex;
+}
+#jumbo__weatherStats h5 {
+  margin: 0 1.5vw 3vh;
+  font-size: 2rem;
+}
+#jumbo__otherStuff {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: auto;
+  border-top: 2px black solid;
+  width: 100%;
+  height: 23%;
+}
+#jumbo__otherStuff ul {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#jumbo__otherStuff ul li {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#jumbo__otherStuff ul li h5 {
+  font-size: 1.2rem;
+}
+#jumbo__otherStuff ul li small {
+  font-weight: 600;
+}
+#weather__spinner {
+  display: block;
+  margin: auto 0;
+  width: 8vw;
+  height: 8vw;
+}
+.active {
+  transform: translateX(50%);
+}
+footer {
+  width: 100vw;
+  padding: 10vh 0;
+  background: #49494969;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#footer__content-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#footer__content-container ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 3.5rem;
+  margin: 2vh 0;
+  width: 50%;
+}
+#footer__content-container ul i {
+  padding: 10px;
+  transition: all 100ms ease-in-out;
+  color: white;
+}
+#footer__content-container ul i:hover {
+  cursor: pointer;
+  color: #eb0ceb;
+  transform: scale(1.1);
+}
+#content__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+#content__text h5 {
+  text-align: center;
+  font-size: 1.6rem;
+}
+#footer__contact {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#footer__contact form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+}
+#footer__contact form input,
+#footer__contact form textarea {
+  outline: none;
+  border: none;
+  background: #4c4c4c;
+  color: white;
+  margin: 0.7vh 0;
+  padding: 5px 10px;
+  font-size: 1.2rem;
+  width: 100%;
+  line-height: 1.8rem;
+}
+#footer__contact form textarea {
+  height: 15rem;
+}
+#footer__contact form button {
+  align-self: flex-start;
+  border: 2px solid #c713c7;
+  color: #c713c7;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 8px 25px;
+  background: #00000000;
+  transition: all 70ms ease-in;
+}
+#footer__contact form button:hover {
+  cursor: pointer;
+  transform: scale(0.95);
+  color: #fff;
+  background: #c713c7;
+}
+/*
+These can be done inside of you LESS selectors however I am not going to doing it that way because I am not sure if Britt will be covering it that way or not and I dont want to cause confusion.
+
+Also in most cases these are referred to as breakpoints this is because you content will break and shift around at certain sizes. If don't correctly you css should be able to handle your screen resizing util that breakpoint is his at which point it will shift. These width values are usually on common device width however I am adjust them the whole way through because I am paranoid. 
+
+TLDR: THIS IS THE CORRECT TOOL HOWEVER TRY TO USE COMMON DEVICE WIDTHS AND NOT JUST ADJUST AS IS BREAKS
+
+*/
+@media only screen and (max-device-width: 950px) {
+  #main__about {
+    width: 80%;
+  }
+  #footer__contact form {
+    width: 100%;
+  }
+}
+@media only screen and (max-device-width: 738px) {
+  header {
+    background: rgba(0, 0, 0, 0.63);
+  }
+  header ul {
+    width: 50%;
+  }
+  main {
+    margin: 0px 3vw 15vh;
+  }
+  #main__jumbo {
+    padding-top: 6%;
+  }
+  #main__jumbo h2 {
+    font-size: 2rem;
+    font-weight: 600;
+  }
+  #main__jumbo h3 {
+    font-size: 1.5rem;
+  }
+  #jumbo__weatherStats h5 {
+    font-size: 1.5rem;
+  }
+  #jumbo__otherStuff ul {
+    width: 80%;
+  }
+  #jumbo__otherStuff ul li h5 {
+    font-size: 0.9rem;
+  }
+  #jumbo__otherStuff ul li small {
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+  #main__about {
+    width: 55%;
+  }
+  #main__about h3 {
+    width: 70%;
+    white-space: nowrap;
+    font-size: 3rem;
+    margin: 40px 0 20px 0;
+    border-bottom: 1px white solid;
+  }
+  #main__about p {
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    line-height: 3rem;
+  }
+  #main__about {
+    width: 90%;
+  }
+  #content__text {
+    width: 90%;
+  }
+  #content__text h5 {
+    text-align: center;
+    font-size: 1.6rem;
+  }
+}
+@media only screen and (max-device-width: 568px) {
+  header {
+    background: rgba(0, 0, 0, 0.63);
+  }
+  header ul {
+    width: 80%;
+  }
+  main {
+    margin: 0px 1vw 15vh;
+  }
+  #main__jumbo {
+    padding-top: 15%;
+  }
+  #main__jumbo h2 {
+    font-size: 1.7rem;
+    font-weight: 600;
+  }
+  #main__jumbo h3 {
+    font-size: 1.5rem;
+  }
+  #jumbo__weatherStats h5 {
+    font-size: 1.2rem;
+  }
+  #jumbo__otherStuff ul {
+    width: 95%;
+  }
+  #jumbo__otherStuff ul li h5 {
+    font-size: 0.8rem;
+  }
+  #jumbo__otherStuff ul li small {
+    font-size: 0.7rem;
+    font-weight: 600;
+  }
+  #main__about {
+    width: 55%;
+  }
+  #main__about h3 {
+    width: 70%;
+    white-space: nowrap;
+    font-size: 3rem;
+    margin: 40px 0 20px 0;
+    border-bottom: 1px white solid;
+  }
+  #main__about p {
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    line-height: 3rem;
+  }
+  #main__about {
+    width: 90%;
+  }
+  #content__text {
+    width: 90%;
+  }
+}
+@media only screen and (max-device-width: 650px) {
+  .fa-bars {
+    display: block !important;
+    font-size: 2rem;
+    transition: all 80ms ease-in;
+  }
+  .fa-bars:hover {
+    transform: scale(0.85);
+  }
+  header {
+    position: relative;
+  }
+  header ul {
+    position: absolute;
+    transform: translateX(150%);
+    right: 50%;
+    top: 99px;
+    width: 100%;
+    height: 10vh;
+    padding: 0 5%;
+    background: rgba(0, 0, 0, 0.63);
+    transition: all 400ms ease-in-out;
+  }
+}
+@media only screen and (max-device-width: 460px) {
+  #main__jumbo {
+    padding-top: 25%;
+  }
+  #main__jumbo h2 {
+    font-size: 1.3rem;
+  }
+  #main__jumbo h3 {
+    font-size: 1.2rem;
+  }
+  #jumbo__weatherStats h5 {
+    font-size: 1.2rem;
+  }
+  #main__about {
+    width: 90%;
+  }
+  #main__about h3 {
+    width: 100%;
+    white-space: nowrap;
+    font-size: 2.5rem;
+    margin: 40px 0 20px 0;
+    border-bottom: 1px white solid;
+  }
+  #main__about p {
+    font-size: 1.3rem;
+    letter-spacing: 0.8px;
+    line-height: 2.5rem;
+  }
+  #main__about {
+    width: 90%;
+  }
+  #content__text {
+    width: 90%;
+  }
+  #content__text h5 {
+    text-align: center;
+    font-size: 1.6rem;
+  }
+}
